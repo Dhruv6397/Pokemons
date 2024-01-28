@@ -12,9 +12,11 @@ Right now this website is for desktop only not responsive in nature yet.
 
 
 ## There are same sample images
-
+Image 01:
 ![Sample1](src/assets/sample1.png)
+Image 02:
 ![Sample2](src/assets/sample2.png)
+Image 03:
 ![Sample3](src/assets/sample3.png)
 
 
