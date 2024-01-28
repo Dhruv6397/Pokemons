@@ -1,4 +1,22 @@
-# Getting Started with Create React App
+
+
+# Pokemons kingdom react app
+
+This is created in react js where you can see the details of pokemons by clicking on pokemon's images.
+
+## Site link is given below to view in your browser
+
+### [https://pokemonskingdom.netlify.app/](https://pokemonskingdom.netlify.app/)
+
+Right now this website is for desktop only not responsive in nature yet.
+
+
+## There are same sample images
+
+![Sample1](src/assets/sample1.png)
+![Sample2](src/assets/sample2.png)
+![Sample3](src/assets/sample3.png)
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
