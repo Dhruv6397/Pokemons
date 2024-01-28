@@ -1,3 +1,7 @@
+.nav-container{
+    width: 1000px;
+}
+
 .cc{
     display: grid;
     grid-template-columns: repeat(5,1fr);
@@ -5,16 +9,38 @@
     gap: 10px;
     place-items: center;
     overflow: hidden;
-    background-color: rgb(131, 170, 97);
    
 }
 .cards-only{
     margin-bottom: 20px;
 }
+.next-btn,.prev-btn{ 
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 30px;
+    border: 5px solid black;
+}
 
-
-
-
+.next-btn{
+    float: right;
+    margin-right: 100px;
+}
+.prev-btn{
+    margin-left: 100px;
+    float: left;
+}
+.next-btn:hover{
+    transform: translate(10px);
+}
+.prev-btn:hover{
+    transform: translate(-10px);
+}
+.footer{
+    float: bottom;
+    height:100px;
+    width: 100%;
+}
 .popup-container {
     border-radius: 20px;
     color: white;
@@ -36,7 +62,6 @@ table{
 tr{
     width: 800px;
     height: 500px;
-    border: 2px solid green;
 }
 
 .list{

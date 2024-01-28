@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Card.css'
 import ImageNotFound from './ImageNotFound.png'
 export default function Card(
