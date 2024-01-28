@@ -19,6 +19,7 @@ export default function CardContainer() {
   const firstApi1 =async(arg)=>{
     let raw = await fetch(arg)
     let parsedData = await raw.json()
+    setPrevv(parsedData.previous?parsedData.previous:null)
     setNextt(parsedData.next)
     secondApi(parsedData.results)
   } 

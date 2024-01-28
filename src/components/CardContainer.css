@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+
 .nav-container{
     width: 1000px;
 }
@@ -16,9 +18,9 @@
 }
 .next-btn,.prev-btn{ 
     cursor: pointer;
-    padding: 20px;
+    padding: 15px;
     border-radius: 20px;
-    font-size: 30px;
+    font-size: 25px;
     border: 5px solid black;
 }
 
@@ -31,9 +33,15 @@
     float: left;
 }
 .next-btn:hover{
+    color: white;
+    background-color: #1e2020;
+    border: 5px solid white;
     transform: translate(10px);
 }
 .prev-btn:hover{
+    color: white;
+    background-color: #1e2020;
+    border: 5px solid white;
     transform: translate(-10px);
 }
 .footer{
@@ -53,6 +61,8 @@
     justify-content: space-between; /* Adjust as needed */
     align-items: stretch; /* Adjust as needed */
     user-select: none;
+    text-transform: uppercase;
+    font-family: 'Poor Story', system-ui;
     box-shadow: #1e2020 2px 2px 10px 4px;
     background-color: rgb(199, 132, 32);
 }
@@ -66,6 +76,7 @@ tr{
 
 .list{
     list-style: none;
+    font-size: 20px;
 }
 .popup-container img{
     height: 200px;
