@@ -8,43 +8,42 @@ export default function CardContainer() {
   const [prevv,setPrevv] = useState(null)
   const [nextt,setNextt] = useState(null)
   const [data,setData] = useState([])
+
   const secondApi =async(arg)=>{
     arg.map(async(item,index)=>{
         let rawPokemon = await fetch(`https://pokeapi.co/api/v2/pokemon/${item.name}/`)
         let parsedDataPokemon = await rawPokemon.json()
-        setData((prev)=>[...prev,parsedDataPokemon])
-    
+        setData((prev)=>[...prev,parsedDataPokemon])  
     })
   }
-  const firstApi1 =async(arg)=>{
-    let raw = await fetch(arg)
+
+
+  const firstApi =async(arg)=>{
+    let raw = await fetch(arg?arg:'https://pokeapi.co/api/v2/pokemon?limit=20')
     let parsedData = await raw.json()
-    setPrevv(parsedData.previous?parsedData.previous:null)
+    setPrevv(parsedData.prev)
     setNextt(parsedData.next)
     secondApi(parsedData.results)
   } 
-  const firstApi =async()=>{
-    let raw = await fetch('https://pokeapi.co/api/v2/pokemon?limit=20')
-    let parsedData = await raw.json()
-    setPrevv(parsedData.prev?parsedData.prev:null)
-    setNextt(parsedData.next)
-    secondApi(parsedData.results)
-  } 
+
   useEffect(()=>{
     firstApi()
-    firstApi1()
   },[])
+
   const handleCardClick = (pokemon)=>{
     setSelectedPokemon(pokemon)
   }
   const closes = ()=>{
     setSelectedPokemon(null)
   }
+
   const next =()=>{
-    firstApi1(nextt)
+    setData([])
+    firstApi(nextt)
   }
   const prev =()=>{
-    firstApi1(prevv)
+    setData([])
+    firstApi(prevv)
   }
     return (
     <>
@@ -62,13 +61,13 @@ export default function CardContainer() {
             onClick = {()=>handleCardClick(item)}/>
         ))
         
-      ):(<div>hello</div>)
+      ):(<div>its loading</div>)
      
       } 
       </div>
 
       {data && (<div className='footer'>
-          <button className='next-btn' onClick={next}>Next &rarr;</button>
+          <button className='next-btn'  onClick={next}>Next &rarr;</button>
           <button className='prev-btn' onClick={prev}>&larr; Prev</button>
         </div>)}
       </div>
